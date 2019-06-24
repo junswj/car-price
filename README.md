@@ -12,13 +12,15 @@ When you are planning to buy a new car, first thing you do is web searching. Gat
 Modeling is about improving your method to reach better prediction from the original estimation. Incorporating the modeling in your decision, you might able to save or earn few hundreds to thousand dollars by knowing correctly estimated car values.
 
 # DATA
-**68,455 x 22** (Last Update: 2019-06-22)
+29 California Craigslist sites: https://geo.craigslist.org/iso/us/ca
+
+**75,380 x 22** (Last Update: 2019-06-23)
 
 Web scrapped by modifying source code used for Kaggle data:
 https://www.kaggle.com/austinreese/craigslist-carstrucks-data#craigslistVehiclesFull.csv
 
 
-29 California Craigslist sites: https://geo.craigslist.org/iso/us/ca
+
 
 List of 29 cities and locations in California:
 - bakersfield
