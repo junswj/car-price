@@ -19,9 +19,6 @@ Modeling is about improving your method to reach better prediction from the orig
 Web scrapped by modifying source code used for Kaggle data:
 https://www.kaggle.com/austinreese/craigslist-carstrucks-data#craigslistVehiclesFull.csv
 
-
-
-
 List of 29 cities and locations in California:
 - bakersfield
 - chico
@@ -52,4 +49,10 @@ List of 29 cities and locations in California:
 - ventura county
 - visalia-tulare
 - yuba-sutter
+
+columns:
+['url', 'city', 'city_url', 'price', 'year', 'manufacturer', 'make',
+       'condition', 'cylinders', 'fuel', 'odometer', 'title_status',
+       'transmission', 'VIN', 'drive', 'size', 'type', 'paint_color',
+       'image_url', 'desc', 'lat', 'long']
 
