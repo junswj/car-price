@@ -14,7 +14,7 @@ Modeling is about improving your method to reach better prediction from the orig
 # DATA
 29 California Craigslist sites: https://geo.craigslist.org/iso/us/ca
 
-**75,380 x 22** (Last Update: 2019-06-23)
+**85,861 x 22** (Last Update: 2019-06-23)
 
 Web scrapped by modifying source code used for Kaggle data:
 https://www.kaggle.com/austinreese/craigslist-carstrucks-data#craigslistVehiclesFull.csv
