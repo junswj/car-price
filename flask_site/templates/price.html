@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/format.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+    <div class="meta">
+        <div id="meta_head">
+            <br>
+            <h2>Used Car Price Recommender</h2>
+        </div>
+        <h2> {{ post_title  }}    </h2>
+        <table id=posting_info>
+            {% for table in carinfo_table %}
+                {{ table|safe }}
+            {% endfor %}
+        </table>
+       
+    <br>
+    <h2> Posting Price: ${{ post_price  }}    </h2>
+    <br>
+    <h2 id=recommend_price> Recommended Price: ${{ recommend_price }}</h2>
+    <h2> Car list in the range of recommended price: </h2>
+    <h2> {{  rec_search  }} </h2>
+    
+    </div>  
+    
+</body>
+</html>

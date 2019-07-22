@@ -1,0 +1,86 @@
+.meta{
+    
+    text-align:center;
+}
+
+#meta_head{
+    font-size: 26px;
+}
+
+#meta_para {
+    
+    text-align: center;
+}
+
+
+.form_holder{
+    
+    text-align: center;
+}
+
+#form_wrap{
+    font-size: 26px;
+    
+}
+
+
+#submit{
+    text-align: center;
+    display: block;
+    margin : 0 auto;
+    width: 7em;  
+    height: 2em;
+}
+
+#posting_info{
+    margin : 0 auto;
+    text-align: center;
+}
+
+#recommend_price{
+    color:#d12121dc;
+    text-align: center;
+    display: block;
+    margin : 0 auto;
+}
+
+@media screen and (max-width:1000px){
+    .meta{
+        margin: auto;
+        width: 100%;
+    }
+    
+    #meta_head{
+        margin: auto;
+        width: 100%;
+    }
+    
+    #meta_para {
+        margin: auto;
+        width: 100%;
+    }
+    
+    .form_holder{
+        margin: auto;
+        width: 100%;
+    }
+
+    #form_wrap{
+        margin: auto;
+        width: 100%;
+    }
+    .label{
+        margin: auto;
+        width: 100%;
+    }
+    
+    .label label{
+        margin: auto;
+        width: 100%;
+    }
+
+    .label input,select{
+        margin: 0;
+    clear: both;
+}
+}
