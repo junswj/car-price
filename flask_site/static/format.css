@@ -1,6 +1,7 @@
 .meta{
     
     text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #meta_head{
@@ -32,9 +33,19 @@
     height: 2em;
 }
 
-#posting_info{
-    margin : 0 auto;
-    text-align: center;
+#weblink{
+    font-size: 26px;
+}
+
+div.container {
+    width:300px;
+    margin-left:auto; 
+    margin-right:auto; 
+}
+table#car_info {
+    text-align:center; 
+    
+    
 }
 
 #recommend_price{
@@ -42,7 +53,9 @@
     text-align: center;
     display: block;
     margin : 0 auto;
+    font-size: 30px
 }
+
 
 @media screen and (max-width:1000px){
     .meta{

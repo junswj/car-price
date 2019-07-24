@@ -143,9 +143,6 @@ def chain_reaction(url):
 
     return title, year, price, image_url, carinfo_df, df_data   
 
-
-
-
 def run_model(df_data):
    
     model = pickle.load(open("model.pkl","rb"))
@@ -155,9 +152,6 @@ def run_model(df_data):
 @app.route('/price',methods = ['POST'])
 def price():
     if request.method == 'POST':
-        # to_predict_list = request.form.to_dict()
-        # to_predict_list=list(to_predict_list.values())
-        # to_predict_list = list(map(int, to_predict_list))
 
         posturl = request.form['posturl']
         #title, year, price, image_url, carinfo_df, df_data = chain_reaction(url)
@@ -166,11 +160,14 @@ def price():
 
         recommend_price= run_model(df_data)
         recommend_price=int(round(recommend_price))
+
+        delta_price=recommend_price-int(price)
+
         rp_low=recommend_price//100*100
         rp_high=rp_low+100
         rec_search='https://sfbay.craigslist.org/search/cta?min_price={rp_low}&max_price={rp_high}'.format(rp_low=rp_low, rp_high=rp_high)
   
-        return render_template("price.html", rec_search=rec_search, post_title=title, post_price=price, recommend_price=recommend_price, carinfo_table=carinfo_df)
+        return render_template("price.html",posturl=posturl, delta_price=delta_price, rec_search=rec_search, post_title=title, post_price=price, recommend_price=recommend_price, carinfo_table=carinfo_df)
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
