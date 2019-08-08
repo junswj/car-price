@@ -1,58 +1,19 @@
 # How much is this car worth?
--	Price prediction of used car using data base scrapped from Craigslist.
--	Investigate the important features that determines the car price.
--	Providing a guide line of used car price for car buyers and sellers in California.
+## Craigslist Posting Price Recommender
 
-**Personal motivation:** When I came to the United States, I had to buy a car. I could not buy used car because there were so many things (independent variables affecting the price) to consider. Now, I am planning to build my own criteria for buying used cars and share with others.
-**Personal Goal:** Comparing linear regression and gradient boosting.
+**Objective: Providing a guideline for both car sellers and buyers on Craigslist.**
+> Posting price is the point where the negotiation starts. If you don’t have much experience regarding used-car market, setting this price is very difficult and time-consuming step.  
 
-# Why do we want to predict used car price?
+## Why do we want to predict used car price?
 When you are planning to buy a new car, first thing you do is web searching. Gather the information and ‘estimates’ the car price you are willing to buy. Probably your estimated market price of the car is near the mean value of information you collected. In statistical term, you just set your expected value as a mean value from your sample data set. This is a good starting point, but you still need something to improve your estimation. 
 
 Modeling is about improving your method to reach better prediction from the original estimation. Incorporating the modeling in your decision, you might able to save or earn few hundreds to thousand dollars by knowing correctly estimated car values.
 
-# DATA
-29 California Craigslist sites: https://geo.craigslist.org/iso/us/ca
+## DATA
+0.2 million Craigslist postings are collected over 29 cities in California, during June and July 2019 using web scrapping technique.  Data contains basic vehicle information such as company, model, year made, and paint colors based on the user input. Exploratory Data Analysis (EDA) shows car price is strongly dependent on the year and mileage information, but other features were also affecting the price of car.
 
-**117,047 x 22** (Last Update: 2019-06-27)
+## Machine Learning Models
+Random Forest and Gradient Boosting models were used to provide the recommended price of the vehicle, and the important features affecting the results were analyzed. Besides year and mileage of vehicle, drive and fuel types were also important feature to result accurate prediction.  Each model achieved above 55% of error reduction compare to the base model (median), and the model is deployed to web app.
 
-Web scrapped by modifying source code used for Kaggle data:
-https://www.kaggle.com/austinreese/craigslist-carstrucks-data#craigslistVehiclesFull.csv
-
-List of 29 cities and locations in California:
-- bakersfield
-- chico
-- fresno / madera
-- gold country
-- hanford-corcoran
-- humboldt county
-- imperial county
-- inland empire - riverside and san bernardino counties
-- los angeles
-- mendocino county
-- merced
-- modesto
-- monterey bay
-- orange county
-- palm springs
-- redding
-- reno / tahoe
-- sacramento
-- san diego
-- san luis obispo
-- santa barbara
-- santa maria
-- SF bay area
-- siskiyou county
-- stockton
-- susanville
-- ventura county
-- visalia-tulare
-- yuba-sutter
-
-columns:
-['url', 'city', 'city_url', 'price', 'year', 'manufacturer', 'make',
-       'condition', 'cylinders', 'fuel', 'odometer', 'title_status',
-       'transmission', 'VIN', 'drive', 'size', 'type', 'paint_color',
-       'image_url', 'desc', 'lat', 'long']
-
+## Web APP
+User-Friendly web app is developed, which immediately provides recommended price of the vehicle. When user inputs Craigslist posting URL, web-app collects the text information from the target posting. Collected information is converted to machine readable data and used for the prediction of price. The result page contains basic information of the original Craigslist posting including URL, and recommended price predicted by the model. In addition, web app also provides the clickable URL link that redirects to the Craigslist car listing page, which are similar to the recommended price.
