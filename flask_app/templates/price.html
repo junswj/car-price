@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/format.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+    <div class="meta">
+        <div id="meta_head">
+        
+            <h2>Craigslist Posting Price Recommender</h2>
+        </div>
+        <h2> {{ post_title  }}    </h2>
+        <p>Original Posting: <a href="{{  posturl  }}">{{  posturl  }}</a></p>
+        <div class="container">
+            <table id=car_info>
+                {% for table in carinfo_table %}
+                    {{ table|safe }}
+                {% endfor %}
+            </table>
+        </div>        
+    <h2> Posting Price: ${{ post_price  }}    </h2>
+    <h2 id=recommend_price> Recommended Posting Price: ${{ recommend_price }} ({{delta_price}})</h2>
+    <!--<h2> ** Car list in the range of recommended price ** </h2>-->
+    <p id=weblink>Craigslist Link: <a href="{{  rec_search  }}">{{  rec_search  }}</a></p>
+    
+    </div>  
+    
+</body>
+</html>
