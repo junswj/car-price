@@ -2,7 +2,7 @@ import pickle
 
 def run_model(df_data):
     # loading model.pkl and returning prediction
-    model = pickle.load(open("trained_models/gb_05_2000.pkl","rb"))
+    model = pickle.load(open("trained_models/model.pkl","rb"))
     result = model.predict(df_data)
     return result[0]
 
