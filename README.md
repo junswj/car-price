@@ -26,5 +26,5 @@ Random Forest and Gradient Boosting models were used to provide the recommended 
 User-Friendly web app is developed, which immediately provides recommended price of the vehicle. When user inputs Craigslist posting URL, web-app collects the text information from the target posting. Collected information is converted to machine readable data and used for the prediction of price. The result page contains basic information of the original Craigslist posting including URL, and recommended price predicted by the model. In addition, web app also provides the clickable URL link that redirects to the Craigslist car listing page, which are similar to the recommended price.
 
 <p align="center">
-<img src="static/Picture1.png">
+<img src="static/cl_price_rec_demo.gif">
 </p>
