@@ -48,13 +48,15 @@ raw_df.info()
     dtypes: float64(2), int64(1), object(13)
     memory usage: 29.0+ MB
 
-Exploratory Data Analysis (EDA) shows car price is strongly dependent on the year and mileage information, but other features were also affecting the price of car.
+Exploratory Data Analysis (EDA) shows car price is strongly dependent on the year and mileage information. It is straight forward that the recently made cars and low milage cars are the high price cars.
 <p align="center">
 <img src="static/year_price_2.png">
 </p>
 <p align="center">
 <img src="static/mile_price.png">
 </p>
+Other features were also affecting the price of car. For example, the range of car price varies depending on the drive type. The graph shows 4WD type cars have the widest range of car price. 
+
 <p align="center">
 <img src="static/Drive.png">
 </p>
