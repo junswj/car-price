@@ -19,9 +19,44 @@ Modeling is about improving your method to reach better prediction from the orig
 <p align="center">
 <img src="static/city_carprice.png">
 </p>
-Data contains basic vehicle information such as company, model, year made, and paint colors based on the user input. Exploratory Data Analysis (EDA) shows car price is strongly dependent on the year and mileage information, but other features were also affecting the price of car.
+Data contains basic vehicle information such as company, model, year made, and paint colors based on the user input. 
+
+```Python
+raw_df=pd.read_csv('data/car_data.csv')
+raw_df.info()
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 237347 entries, 0 to 237346
+    Data columns (total 16 columns):
+    url             237347 non-null object
+    city            237347 non-null object
+    price           237347 non-null int64
+    year            236994 non-null float64
+    company         223550 non-null object
+    model           231221 non-null object
+    condition       130062 non-null object
+    cylinders       139521 non-null object
+    fuel            236520 non-null object
+    mileage         191022 non-null float64
+    title_status    236114 non-null object
+    transmission    235256 non-null object
+    drive           164950 non-null object
+    size            77199 non-null object
+    type            176577 non-null object
+    paint_color     161160 non-null object
+    dtypes: float64(2), int64(1), object(13)
+    memory usage: 29.0+ MB
+
+Exploratory Data Analysis (EDA) shows car price is strongly dependent on the year and mileage information, but other features were also affecting the price of car.
 <p align="center">
-<img src="static/year_price_carage.png">
+<img src="static/year_price_2.png">
+</p>
+<p align="center">
+<img src="static/mile_price.png">
+</p>
+<p align="center">
+<img src="static/Drive.png">
 </p>
 
 ## Machine Learning Models
@@ -30,7 +65,9 @@ Random Forest and Gradient Boosting models were used to provide the recommended 
 <p align="center">
 <img src="static/FImodel.png">
 </p>
-
+<p align="center">
+<img src="static/year_price_carage.png">
+</p>
 ## Web APP
 User-Friendly web app is developed, which immediately provides recommended price of the vehicle. When user inputs Craigslist posting URL, web-app collects the text information from the target posting. Collected information is converted to machine readable data and used for the prediction of price. The result page contains basic information of the original Craigslist posting including URL, and recommended price predicted by the model. In addition, web app also provides the clickable URL link that redirects to the Craigslist car listing page, which are similar to the recommended price.
 
