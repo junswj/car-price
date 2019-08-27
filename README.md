@@ -12,7 +12,14 @@ When you are planning to buy a new car, first thing you do is web searching. Gat
 Modeling is about improving your method to reach better prediction from the original estimation. Incorporating the modeling in your decision, you might able to save or earn few hundreds to thousand dollars by knowing correctly estimated car values.
 
 ## DATA
-0.2 million Craigslist postings are collected over 29 cities in California, during June and July 2019 using web scrapping technique.  Data contains basic vehicle information such as company, model, year made, and paint colors based on the user input. Exploratory Data Analysis (EDA) shows car price is strongly dependent on the year and mileage information, but other features were also affecting the price of car.
+0.2 million Craigslist postings are collected over 29 cities in California, during June and July 2019 using web scrapping technique. Number of collected postings vary depending on the city, but the distribution of car price were similar.
+<p align="center">
+<img src="static/city_data.png">
+</p>
+<p align="center">
+<img src="static/city_carprice.png">
+</p>
+Data contains basic vehicle information such as company, model, year made, and paint colors based on the user input. Exploratory Data Analysis (EDA) shows car price is strongly dependent on the year and mileage information, but other features were also affecting the price of car.
 <p align="center">
 <img src="static/year_price_carage.png">
 </p>
