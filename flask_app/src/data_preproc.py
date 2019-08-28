@@ -118,7 +118,7 @@ def content_extract(url):
     image = image_data.find_all("img")
     image_url = str(image[0]).split()[2].replace('src="', "").replace('"',"")
     
-    # car spec to data frame
+    # car spec to extraction - list
     spec_div = soup.find("div", {"class": "mapAndAttrs"})
     spec_row = spec_div.find_all("span")
     spec_raw = [str(i) for i in spec_row]
@@ -129,12 +129,14 @@ def content_extract(url):
     spec_list[0] = 'model: ' + spec_list[0]
     spec_coord = [i.split(': ') for i in spec_list]
     
+    #Data Frame for the display on web page
     display_dict={}
     for i,k in spec_coord:
         display_dict[i] = [k]
     display_df = pd.DataFrame.from_dict(display_dict).T 
     display_df.columns = ['Posting Information']   
-    
+
+    #Data Frame for model prediction
     spec_dict={}
     for i,k in spec_coord:
         spec_dict[i.replace(' ','_')] = [k.replace(' ','_')]
