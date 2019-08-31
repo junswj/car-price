@@ -86,7 +86,21 @@ User-Friendly web app is developed, which immediately provides recommended price
 
 ```Python
 def content_extract(url):
-    #Extrating informations from URL posting
+    ''' Extracting information from URL posting
+
+    Arg:
+        url (str): Craigslist posting url
+
+    Return:
+        title (str): title of the post 
+        year (int): car year made 
+        price (int): posting price of the car 
+        image_url (str): image url of the car
+        display_df (DataFrame): DataFrame displays the spec of car
+        raw_df (DataFrame): DataFrame for the prediction
+
+    '''
+
     r = requests.get(url)
     soup = BeautifulSoup(r.content, "html")
     
