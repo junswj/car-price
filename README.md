@@ -1,8 +1,6 @@
 # How much is this car worth?
 ## Craigslist Posting Price Recommender
 
-__*Web App Link: [Craigslist Posting Price Recommender](http://3.209.34.102:8080/)*__ 
-
 **Objective: Providing a guideline for both car sellers and buyers on Craigslist.**
 > Posting price is the point where the negotiation starts. If you don’t have much experience regarding used-car market, setting this price is very difficult and time-consuming step.  
 
@@ -148,8 +146,6 @@ def content_extract(url):
 
 
 The result page contains basic information of the original Craigslist posting including URL, and recommended price predicted by the model. In addition, web app also provides the clickable URL link that redirects to the Craigslist car listing page, which are similar to the recommended price.
-
-__*Web App Link: [Craigslist Posting Price Recommender](http://3.209.34.102:8080/)*__ 
 
 <p align="center">
 <img src="static/cl_price_rec_demo.gif">
